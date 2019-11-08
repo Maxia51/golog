@@ -23,7 +23,7 @@ func getCaller() string {
 	return "Uknown"
 }
 
-func print(color Color, lvl Level, m string) {
+func print(color Color, lvl Level, m ...string) {
 
 	if colorLevel {
 		fmt.Println(color, "[", time.Now().Format(timeFormat), "]", "[", lvl.ToString(), "]", "[", getCaller(), "]", m, "\033[0m")
